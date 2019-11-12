@@ -36,7 +36,10 @@ class AvLabels:
         almap = {}
         with open(alfile, 'r') as fd:
             for line in fd:
-                alias, token = line.strip().split()[0:2]
+                tmp_line = line.strip().split()[0:2]
+                if len(tmp_line) == 0:
+                    continue
+                alias, token = tmp_line
                 almap[alias] = token
         return almap
 
@@ -63,6 +66,8 @@ class AvLabels:
         '''Parse and extract sample information from JSON line
            Returns a SampleInfo named tuple: md5, sha1, sha256, label_pairs 
         '''
+        if 'results' in vt_rep:
+            vt_rep = vt_rep['results']
         label_pairs = []
         if from_vt:
             try:
@@ -117,7 +122,7 @@ class AvLabels:
                            if p[0] in av_set])
 
         # Number of AVs that flagged the sample as PUP
-        av_pup = map(lambda x: x[1], bool_set).count(True)
+        av_pup = list(map(lambda x: x[1], bool_set)).count(True)
 
         # Flag as PUP according to a threshold
         if (float(av_pup) >= float(av_detected)*threshold) and av_pup != 0:
@@ -269,7 +274,7 @@ class AvLabels:
         ##################################################################
         # Token ranking: sorts tokens by decreasing count and then token #
         ##################################################################
-        sorted_tokens = sorted(token_map.iteritems(), 
+        sorted_tokens = sorted(token_map.items(), 
                                 key=itemgetter(1,0), 
                                 reverse=True)
 

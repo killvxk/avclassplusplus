@@ -1,1 +1,4 @@
 lib/*.pyc
+lib/__pycache__/*
+__pycache__/
+malheurReference*
