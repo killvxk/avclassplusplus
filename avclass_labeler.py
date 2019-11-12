@@ -168,6 +168,15 @@ def main(args):
                         elif family:
                             token_family_map[curr_tok] = set(family)
 
+                # DGA detection
+                if args.dgadetect:
+                    eng_dict_file = args.dgadetect[0]
+                    n = int(args.dgadetect[1])
+                    threshold = float(args.dgadetect[2])
+                    tokens = [token for token in tokens if av_labels.is_dga(token, eng_dict_file, n, threshold) == False]
+                else:
+                    tokens = [token for token in tokens if av_labels.is_dga(token) == False]
+
                 # Top candidate is most likely family name
                 if tokens:
                     family = tokens[0][0]
@@ -387,6 +396,9 @@ if __name__=='__main__':
     argparser.add_argument('-aliasdetect',
         action='store_true',
         help='if used produce aliases file at end')
+
+    argparser.add_argument('-dgadetect', nargs='*',
+        help='Optional arguments for DGA removal')
 
     argparser.add_argument('-v', '--verbose',
         action='store_true',
