@@ -12,7 +12,7 @@ import argparse
 from avclass_common import AvLabels
 from operator import itemgetter
 import evaluate_clustering as ec
-import json
+import ast
 import traceback
 
 # Default alias file
@@ -106,7 +106,7 @@ def main(args):
             vt_all += 1
 
             # Read JSON line and extract sample info (i.e., hashes and labels)
-            vt_rep = json.loads(line)
+            vt_rep = ast.literal_eval(line)
             sample_info = av_labels.get_sample_info(vt_rep, ifile_are_vt)
             if sample_info is None:
                 try:
