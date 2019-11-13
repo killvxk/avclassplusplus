@@ -1,0 +1,3 @@
+[submodule "lib/ember"]
+	path = lib/ember
+	url = git@github.com:endgameinc/ember.git
