@@ -185,7 +185,7 @@ class AvLabels:
         # Truncate after last '.'
         if av_name in set(['Norman', 'Avast', 'Avira', 'Kaspersky',
                           'ESET-NOD32', 'Fortinet', 'Jiangmin', 'Comodo',
-                          ' GData', 'Avast', 'Sophos',
+                          'GData', 'Avast', 'Sophos',
                           'TrendMicro-HouseCall', 'TrendMicro',
                           'NANO-Antivirus', 'Microsoft']):
             label = label.rsplit('.', 1)[0]
