@@ -316,14 +316,14 @@ However, note that in the above command you are trying to identify aliases from 
 
 We deeply respect original authors of AVCLASS. Reference with love:
 
-[1] Marcos Sebastián, Richard Rivera, Platon Kotzias, and Juan Caballero. 2016. AVCLASS: A tool for Massive Malware Labeling. In *Proceedings of the 19th International Symposium on Research in Attacks, Intrusions and Defenses (RAID'16).* 230--253. **(If you wish to cite the original AVCLASS, please cite this paper; if you wish to cite AVCLASS++, just refer this repository URL)**
-[2] Platon Kotzias, Srdjan Matic, Richard Rivera, and Juan Caballero. 2015. Certified PUP: Abuse in Authenticode Code Signing. In *Proceedings of the 22nd ACM Conference on Computer and Communication Security (CCS'15).* 465--478.
+- [1] Marcos Sebastián, Richard Rivera, Platon Kotzias, and Juan Caballero. 2016. AVCLASS: A tool for Massive Malware Labeling. In *Proceedings of the 19th International Symposium on Research in Attacks, Intrusions and Defenses (RAID'16).* 230--253. **(If you wish to cite the original AVCLASS, please cite this paper; if you wish to cite AVCLASS++, just refer this repository URL)**
+- [2] Platon Kotzias, Srdjan Matic, Richard Rivera, and Juan Caballero. 2015. Certified PUP: Abuse in Authenticode Code Signing. In *Proceedings of the 22nd ACM Conference on Computer and Communication Security (CCS'15).* 465--478.
 
 The techniques introduced in AVCLASS++ are based on the following papers:
 
-[3] Xiaojin Zhu and Zoubin Ghahramani. 2002. Learning from Labeled and Unlabeled Data with Label Propagation. *Technical Report CMU-CALD-02-107, Carnegie Mellon University.*
-[4] Hyrum S. Anderson and Phil Roth. 2018. EMBER: An Open Dataset for Training Static PE Malware Machine Learning Models. *CoRR, abs/1804.04637.*
-[5] Stefano Schiavoni, Federico Maggi, Lorenzo Cavallaro, and Stefano Zanero. 2014. Phoenix: DGA-Based Botnet Tracking and Intelligence. In *Proceeding of the 11th Conference on Detection of Intrusions and Malware & Vulnerability Assessment (DIMVA'14).* 192--211.
+- [3] Xiaojin Zhu and Zoubin Ghahramani. 2002. Learning from Labeled and Unlabeled Data with Label Propagation. *Technical Report CMU-CALD-02-107, Carnegie Mellon University.*
+- [4] Hyrum S. Anderson and Phil Roth. 2018. EMBER: An Open Dataset for Training Static PE Malware Machine Learning Models. *CoRR, abs/1804.04637.*
+- [5] Stefano Schiavoni, Federico Maggi, Lorenzo Cavallaro, and Stefano Zanero. 2014. Phoenix: DGA-Based Botnet Tracking and Intelligence. In *Proceeding of the 11th Conference on Detection of Intrusions and Malware & Vulnerability Assessment (DIMVA'14).* 192--211.
 
 ## License
 
