@@ -208,7 +208,7 @@ class AvLabels:
         # Truncate after last '@'
         # GData would belong here, but already trimmed earlier
         if av_name in set(['Ad-Aware', 'BitDefender', 'Emsisoft', 'F-Secure', 
-                          'Microworld-eScan']):
+                          'eScan', 'AegisLab']):
             label = label.rsplit('(', 1)[0]
 
         return label
