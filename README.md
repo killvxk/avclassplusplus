@@ -1,4 +1,6 @@
-# AVCLASS++
+# AVCLASS++: Yet Another Massive Malware Labeling Tool
+
+![python](https://img.shields.io/badge/Python-3.6-blue?style=flat-square) ![arsenal](https://img.shields.io/badge/Black%20Hat-Europe%202019%20Arsenal-blue?style=flat-square)
 
 AVCLASS++ is an appealing complement to [AVCLASS](https://github.com/malicialab/avclass) [1], a state-of-the-art malware labeling tool.
 
@@ -316,7 +318,7 @@ However, note that in the above command you are trying to identify aliases from 
 
 We deeply respect original authors of AVCLASS. Reference with love:
 
-- [1] Marcos Sebastián, Richard Rivera, Platon Kotzias, and Juan Caballero. 2016. AVCLASS: A tool for Massive Malware Labeling. In *Proceedings of the 19th International Symposium on Research in Attacks, Intrusions and Defenses (RAID'16).* 230--253. **(If you wish to cite the original AVCLASS, please cite this paper; if you wish to cite AVCLASS++, just refer this repository URL)**
+- [1] Marcos Sebastián, Richard Rivera, Platon Kotzias, and Juan Caballero. 2016. AVCLASS: A tool for Massive Malware Labeling. In *Proceedings of the 19th International Symposium on Research in Attacks, Intrusions and Defenses (RAID'16).* 230--253. **(If you wish to cite the original AVCLASS, please cite this paper; if you wish to cite AVCLASS++, just refer to this repository URL)**
 - [2] Platon Kotzias, Srdjan Matic, Richard Rivera, and Juan Caballero. 2015. Certified PUP: Abuse in Authenticode Code Signing. In *Proceedings of the 22nd ACM Conference on Computer and Communication Security (CCS'15).* 465--478.
 
 The techniques introduced in AVCLASS++ are based on the following papers:
