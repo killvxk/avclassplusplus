@@ -12,7 +12,7 @@ In a nutshell, AVCLASS++ enables the following operation:
 
 - Input:
     - VirusTotal report(s)
-    - Malware binar(y|ies) (Optional)
+    - Malware binar(y|ies) (optional)
 - Output:
     - Malware label(s) (family name)
 
@@ -33,7 +33,7 @@ The following limitation was pointed out in the original AVCLASS paper:
 
 > The main limitation of AVClass is that its output depends on the input AV labels. It tries to compensate for the noise on those labels, but cannot identify the family of a sample if AV engines do not provide non-generic family names to that sample. In particular, it cannot label samples if at least 2 AV engines do not agree on a non-generic family name. Results on 8 million samples showed that AVClass could label 81% of the samples. In other words, it could not label 19% of the samples because their labels contained only generic tokens.
 
-We have organized such pitfalls into these factors.
+We have organized such pitfalls into two factors.
 
 - *First,* AVCLASS is prone to fail labeling samples that have just been posted to VirusTotal because only a few anti-viruses give labels to such samples. Such a sample will be labeled SINGLETON. *An inconvenient truth: when we provided AVCLASS with 20,000 VirusTotal reports, half of them were labeled SINGLETON.*
 - *Second,* AVCLASS cannot determine if the label is randomly generated (as with domain generation algorithms of malware) or not. Some anti-viruses that VirusTotal has worked with after AVCLASS released were labeled with the DGA, resulting in a biased label.
