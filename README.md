@@ -137,7 +137,7 @@ To use this function, run the following command:
 python avclass_propagator.py -labels <file1> -sampledir <directory> -results <file2>
 ```
 
-The input file passed in the argument `-labels` must be created in advance by `avclass_labeler.py` in advance. The directory passed in the argument `-sampledir` must contain samples with the hash values contained in the labels file. The argument `-results` is optional. By default, the propagator creates `_pr.labels` file based on a `.labels` file passed as a first argument. In addition, you can automatically optimize hyperparameter values by enabling `-opt` option.
+The input file passed with `-labels` must be created in advance by `avclass_labeler.py` in advance. The directory passed with `-sampledir` must contain samples with the hash values contained in the labels file. The option `-results` is optional. By default, the propagator creates `_pr.labels` file based on a `.labels` file passed as an argument. AVCLASS++ overwrites only SINGLETON labels with predicted labels by default. You can overwrite all original labels with predicted labels by enabling the `-force` option. In addition, you can automatically optimize hyperparameter values by enabling `-opt`. 
 
 ```
 python avclass_propagator.py -labels input.labels -sampledir samples -results output.labels -opt
