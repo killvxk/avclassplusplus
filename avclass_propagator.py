@@ -19,6 +19,7 @@ from ember import PEFeatureExtractor
 from sklearn.preprocessing import LabelEncoder
 from sklearn.semi_supervised import LabelPropagation, LabelSpreading
 from sklearn.model_selection import cross_val_score
+import pickle
 import optuna
 
 def get_file_hash_value(data, hash_type):
@@ -99,8 +100,10 @@ def main(args):
                 }
                 clf = LabelSpreading(**params)
 
-            score = cross_val_score(clf, X, y, n_jobs=-1, cv=2)
+            score = cross_val_score(clf, X, y_encoded, n_jobs=-1, cv=2)
             accuracy = score.mean()
+
+            clf.fit(X, y_encoded)
 
             if not os.path.exists("models"):
                 os.mkdir("models")
