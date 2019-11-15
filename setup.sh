@@ -2,6 +2,8 @@
 
 EMBER_DIR="lib/ember"
 
+pip install -r requirements.txt
+
 if [ ! -f $EMBER_DIR ]; then
     git submodule update --init --recursive
 fi
