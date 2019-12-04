@@ -24,7 +24,7 @@ fam:
 	@echo -e '\e[32m Family Ranking \e[m'
 	head -n1 data/malheurReference_lb.json 
 	python avclass_labeler.py -lb data/malheurReference_lb.json -v -fam > malheurReference.labels
-	head -n5 malheurReference.labels
+	head -n5 malheurReference_lb.families
 
 pup:
 	@echo -e '\e[32m PUP Classification \e[m'
