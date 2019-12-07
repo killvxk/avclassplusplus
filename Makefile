@@ -39,9 +39,10 @@ gt:
 
 prop:
 	@echo -e '\e[32m Label Propagation \e[m'
-	unzip -P infected samples.zip
-	python avclass_propagator.py -sampledir samples -labels data/demo.labels
-	diff -ur data/demo.labels data/demo_pr.labels || exit 0
+	@echo 'Prepare .labels file and sample files'
+	@echo 'unzip -P infected samples.zip'
+	@echo 'python avclass_propagator.py -sampledir samples -labels data/demo.labels'
+	@echo 'diff -ur data/demo.labels data/demo_pr.labels || exit 0'
 
 clean:
 	rm -f malheurReference*
